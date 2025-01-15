@@ -7,8 +7,12 @@ def load_data():
     """Load data from the pickle file."""
     if os.path.exists(PICKLE_FILE) and os.path.getsize(PICKLE_FILE) > 0:
         with open(PICKLE_FILE, "rb") as file:
-            return pickle.load(file)
-    return []  # Return an empty list if the file doesn't exist or is empty
+            data = pickle.load(file)
+            if not isinstance(data, dict):  # Ensure it's a dictionary
+                print("Data format is incorrect, initializing as empty dictionary.")
+                return {}
+            return data
+    return {}  # Return an empty dictionary if the file doesn't exist or is empty
 
 def save_data(data):
     """Save data to the pickle file."""

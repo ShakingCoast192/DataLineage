@@ -1,8 +1,0 @@
-Traceback (most recent call last):
-  File "/Users/nshantayagar/Desktop/Projects/DataLineage/main.py", line 44, in <module>
-    main_menu()
-  File "/Users/nshantayagar/Desktop/Projects/DataLineage/main.py", line 24, in main_menu
-    service.add_SLE()
-  File "/Users/nshantayagar/Desktop/Projects/DataLineage/service.py", line 35, in add_SLE
-    data[SLE_name] = services
-TypeError: list indices must be integers or slices, not str
