@@ -15,9 +15,11 @@ def main_menu():
             if search_choice == "1":
                 SLE_name = input("Enter SLE name to search for: ")
                 service.search_SLE(SLE_name)
+                break
             elif search_choice == "2":
                 service_name = input("Enter service name to search for: ")
                 service.search_service(service_name)
+                break
             else:
                 print("Invalid choice! Please select 1 or 2.")
         elif choice == "2":
